@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "EmpDetails";
+}
+
+<h2>EmpDetails</h2>
+
+<div class="container">
+    <h3> Thank you !!</h3>
+    <table class="table">
+        <tr>
+            <td> First name </td>
+            <td>  @ViewBag.firstname </td>
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td> @ViewBag.lastname</td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td> @ViewBag.designation</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>@ViewBag.address</td>
+        </tr>
+        <tr>
+            <td>technicalskills</td>
+            <td>
+                @foreach (var item in ViewBag.technicalskills)
+                {
+                    <p>@item</p>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Current Employee of organization</td>
+            <td>@ViewBag.options</td>
+        </tr>
+    </table>
+
+</div>

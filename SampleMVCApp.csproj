@@ -172,6 +172,8 @@
     <Content Include="Views\Employee\ShowAllEmployee.cshtml" />
     <Content Include="Views\Person\PersonalDetails.cshtml" />
     <Content Include="Views\Person\Details.cshtml" />
+    <Content Include="Views\Employee\EmpDetails.cshtml" />
+    <Content Include="Views\Employee\NewEmployee.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

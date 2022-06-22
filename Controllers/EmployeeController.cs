@@ -24,6 +24,31 @@ namespace SampleMVCApp.Controllers
             ViewBag.EmpList = emp;
             return View();
         }
+
+        [HttpGet]
+
+        public ActionResult NewEmployee()
+        {
+            List<string> Options = new List<string>();
+            Options.Add("Choose an Option");
+            Options.Add("Yes");
+            Options.Add("No");
+            ViewData["Options"] = new SelectList(Options);
+            return View();
+        }
+
+        [HttpPost]  //attribute
+        public ActionResult NewEmployee(FormCollection fc, ICollection<string> technicalskills)
+        {
+            ViewBag.firstname = fc["firstname"];
+            ViewBag.lastname = fc["lastname"];
+            ViewBag.designation = fc["designation"];
+            ViewBag.address = fc["address"];
+            ViewBag.technicalskills = technicalskills;
+            ViewBag.Options = fc["Options"];
+            return View("EmpDetails");
+        }
+
         public ActionResult Index()
         {
             return View();
